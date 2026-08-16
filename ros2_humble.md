@@ -32,3 +32,15 @@ gedit ~/.bashrc
   + thêm `source ~/<folder>/install/setup.bash`
   + thêm `source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 ```
+
+# 2. Thiết lập giao tiếp với RPLIDAR A3M1
+- Cắm USB của RPLIDAR A3M1 vào laptop.
+- Trong VirtualBox, Devices → USB → thêm cổng giao tiếp với lidar.
+- Kiểm tra kết nối trong máy ảo và cấp quyền cho cổng giao tiếp với lidar
+```
+lsusb
+ls /dev/ttyUSB*
+ls -l /dev/ttyUSB0
+sudo usermod -aG dialout $USER
+sudo reboot
+```
