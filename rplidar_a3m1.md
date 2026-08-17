@@ -8,7 +8,6 @@
 ```
 - Tần số quét điển hình của RPLIDAR A3M1 là 10 Hz, và tần số này có thể được điều chỉnh tự do trong phạm vi 5–15 Hz tùy theo yêu cầu cụ thể. Với tần số quét 10 Hz, tốc độ lấy mẫu là 16 kHz và độ phân giải góc là 0,225°.
 - Độ phẳng trường quét ±1,5°.
-- Giao diện giao tiếp TTL UART, với tốc độ lựa chọn 112500 bps và 256000 bps.
 - Bước sóng laser là 775 - 795 nm, công suất tối đa 12mW, độ dài xung 60 - 90 µs.
 
 # 2. Cấu tạo và nguyên lý hoạt động RPLIDAR A3M1
@@ -31,7 +30,14 @@
 + Vàng (TX): 0 - 3.5V, ngõ ra UART.
 + Xanh lá (RX): 0 - 3.5V, ngõ vào UART.
 + Đen (GND): 0V, nối đất.
-+ Xanh dương (PWM): 0 - 5V, đầu vào tín hiệu điều khiển động cơ, thường dùng 3.3V.
++ Xanh dương (PWM): 3.3V, đầu vào tín hiệu điều khiển động cơ.
+```
+- Giao diện giao tiếp TTL UART, với tốc độ lựa chọn 112500 bps và 256000 bps, chế độ hoạt động 8N1.
+- RPLIDAR A3M1 được tích hợp sẵn bộ điều khiển động cơ có chức năng điều chỉnh tốc độ. Người dùng có thể điều khiển việc khởi động, dừng và tốc độ quay của động cơ thông qua chân MOTOCTL trên giao diện. MOTOCTL có thể được điều khiển bằng tín hiệu PWM với tần số và duty cycle phù hợp. Ở chế độ này, tốc độ quay được quyết định bởi duty cycle của tín hiệu PWM đầu vào.
+```
++ Điện áp: 3.3 V
++ Tần số: 25000 Hz, tín hiệu vuông.
++ Duty cycle: thay đổi tùy cài đặt, thường là 60% tại tần số quét 10 Hz.
 ```
 
 # 3. Ứng dụng
