@@ -41,9 +41,12 @@
 + Tần số: 25000 Hz, tín hiệu vuông, tại tần số quét 10 Hz.
 + Duty cycle: thay đổi tùy cài đặt, thường là 60% tại tần số quét 10 Hz.
 ```
-- Chú ý: Bốn vít M3 ở mặt đáy không được gắn ốc dài quá 4 mm, nếu không mô-đun bên trong có thể bị hư hỏng.
+# 3. Chú ý
+- Bốn vít M3 ở mặt đáy không được gắn ốc dài quá 4 mm, nếu không mô-đun bên trong có thể bị hư hỏng.
+- Enhanced Mode được thiết kế cho môi trường trong nhà. Ánh sáng trong nhà thông thường (bao gồm cả trường hợp không có ánh sáng) sẽ không ảnh hưởng đến hiệu suất của RPLIDAR. Ánh sáng mạnh (chẳng hạn như laser công suất cao) sẽ gây hại cho hệ thống quang học của LiDAR và cần được tránh.
+- Outdoor Mode, RPLIDAR A3 có thể hoạt động bình thường để phát hiện các vật thể dưới ánh sáng môi trường trực tiếp. Tuy nhiên, khoảng cách đo có thể ngắn hơn khi có ánh sáng mặt trời trực tiếp mạnh, và vẫn cần bảo vệ hệ thống quang học khỏi ánh sáng mặt trời chiếu trực tiếp.
 
-# 3. Ứng dụng
+# 4. Ứng dụng
 - RPLIDAR A3M1 có thể được sử dụng trong các kịch bản ứng dụng sau:
 ```
 + Điều hướng và định vị robot.
