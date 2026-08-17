@@ -36,7 +36,7 @@
 - RPLIDAR A3M1 được tích hợp sẵn bộ điều khiển động cơ có chức năng điều chỉnh tốc độ. Người dùng có thể điều khiển việc khởi động, dừng và tốc độ quay của động cơ thông qua chân MOTOCTL trên giao diện. MOTOCTL có thể được điều khiển bằng tín hiệu PWM với tần số và duty cycle phù hợp. Ở chế độ này, tốc độ quay được quyết định bởi duty cycle của tín hiệu PWM đầu vào.
 ```
 + Điện áp: 3.3 V
-+ Tần số: 25000 Hz, tín hiệu vuông.
++ Tần số: 25000 Hz, tín hiệu vuông, tại tần số quét 10 Hz..
 + Duty cycle: thay đổi tùy cài đặt, thường là 60% tại tần số quét 10 Hz.
 ```
 
