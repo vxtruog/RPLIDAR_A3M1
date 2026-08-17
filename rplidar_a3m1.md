@@ -1,6 +1,21 @@
+# 1. Giới thiệu
 - RPLIDAR A3M1 là máy quét laser 2D 360° (LiDAR), do SLAMTEC phát triển. Thiết bị có khả năng thực hiện tới 16.000 phép đo khoảng cách bằng laser mỗi giây với tốc độ quay cao.
 - Phạm vi quét lên đến 25m, dữ liệu đám mây điểm 2D được tạo ra có thể được sử dụng cho việc lập bản đồ, định vị và mô hình hóa đối tượng/môi trường.
 - RPLIDAR A3M1 hỗ trợ hoạt động luân phiên ở hai chế độ: Enhanced Mode và Outdoor Mode.
   + Với Enhanced Mode, thiết bị hoạt động với bán kính đo và tốc độ lấy mẫu tối đa nhằm đạt được hiệu suất lập bản đồ tối ưu trong môi trường trong nhà.
   + Với Outdoor Mode, thiết có khả năng chống nhiễu từ ánh sáng ban ngày đáng tin cậy hơn, giúp ngăn thiết bị bị “mù” khi hoạt động trong môi trường ngoài trời.
 - Tần số quét điển hình của RPLIDAR A3M1 là 10 Hz, và tần số này có thể được điều chỉnh tự do trong phạm vi 5–15 Hz tùy theo yêu cầu cụ thể. Với tần số quét 10 Hz, tốc độ lấy mẫu là 16 kHz và độ phân giải góc là 0,225°.
+
+# 2. Cấu tạo và nguyên lý hoạt động
+- RPLIDAR A3M1 bao gồm một lõi máy quét khoảng cách và một bộ phận truyền động cơ khí giúp lõi máy quét quay với tốc độ cao.
+- Người dùng có thể nhận dữ liệu quét khoảng cách thông qua giao diện giao tiếp của RPLIDAR, đồng thời có thể điều khiển việc khởi động, dừng và tốc độ quay của động cơ thông qua tín hiệu PWM.
+- RPLIDAR A3M1 được trang bị hệ thống phát hiện tốc độ quay và thích ứng với tốc độ quay. Hệ thống sẽ tự động điều chỉnh độ phân giải góc theo tốc độ quay thực tế.
+- RPLIDAR A3M1 dựa trên nguyên lý đo khoảng cách bằng phương pháp laser triangulation và sử dụng phần cứng thu nhận và xử lý hình ảnh tốc độ cao do SLAMTEC phát triển.
+- Trong mỗi quá trình đo khoảng cách, RPLIDAR phát ra tín hiệu laser hồng ngoại đã được điều chế, sau đó tín hiệu laser được phản xạ bởi vật thể cần phát hiện. Tín hiệu phản hồi sau đó được lấy mẫu trong RPLIDAR, và bộ xử lý tín hiệu số (DSP) được tích hợp trong RPLIDAR sẽ bắt đầu xử lý dữ liệu mẫu, sau đó xuất ra giá trị khoảng cách và giá trị góc giữa vật thể và RPLIDAR thông qua giao diện giao tiếp. Khi được dẫn động bởi hệ thống động cơ, lõi máy quét khoảng cách sẽ quay theo chiều kim đồng hồ và thực hiện quét 360° đối với môi trường xung quanh.
+- Mỗi dữ liệu của một điểm lấy mẫu chứa các thông tin được trình bày bên dưới đây
+```
++ Khoảng cách, đơn vị mm, là giá trị khoảng cách hiện tại đo được giữa lõi quay của RPLIDAR và điểm lấy mẫu.
++ Góc phương vị hiện tại của phép đo, đơn vị °.
++ Cờ đánh dấu bắt đầu một vòng quét mới.
++ Giá trị checksum của dữ liệu phản hồi từ RPLIDAR.
+```
