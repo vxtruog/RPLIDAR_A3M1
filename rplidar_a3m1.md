@@ -9,6 +9,8 @@
 - Tần số quét điển hình của RPLIDAR A3M1 là 10 Hz, và tần số này có thể được điều chỉnh tự do trong phạm vi 5–15 Hz tùy theo yêu cầu cụ thể. Với tần số quét 10 Hz, tốc độ lấy mẫu là 16 kHz và độ phân giải góc là 0,225°.
 - Độ phẳng trường quét ±1,5°.
 - Bước sóng laser là 775 - 795 nm, công suất tối đa 12mW, độ dài xung 60 - 90 µs.
+- Khối lượng 190g.
+- Nhiệt độ hoạt động từ 0 đến 40°C.
 
 # 2. Cấu tạo và nguyên lý hoạt động RPLIDAR A3M1
 - RPLIDAR A3M1 bao gồm một lõi máy quét khoảng cách và một bộ phận truyền động cơ khí giúp lõi máy quét quay với tốc độ cao.
@@ -36,9 +38,10 @@
 - RPLIDAR A3M1 được tích hợp sẵn bộ điều khiển động cơ có chức năng điều chỉnh tốc độ. Người dùng có thể điều khiển việc khởi động, dừng và tốc độ quay của động cơ thông qua chân MOTOCTL trên giao diện. MOTOCTL có thể được điều khiển bằng tín hiệu PWM với tần số và duty cycle phù hợp. Ở chế độ này, tốc độ quay được quyết định bởi duty cycle của tín hiệu PWM đầu vào.
 ```
 + Điện áp: 3.3 V
-+ Tần số: 25000 Hz, tín hiệu vuông, tại tần số quét 10 Hz..
++ Tần số: 25000 Hz, tín hiệu vuông, tại tần số quét 10 Hz.
 + Duty cycle: thay đổi tùy cài đặt, thường là 60% tại tần số quét 10 Hz.
 ```
+- Chú ý: Bốn vít M3 ở mặt đáy không được gắn ốc dài quá 4 mm, nếu không mô-đun bên trong có thể bị hư hỏng.
 
 # 3. Ứng dụng
 - RPLIDAR A3M1 có thể được sử dụng trong các kịch bản ứng dụng sau:
