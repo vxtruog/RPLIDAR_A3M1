@@ -45,3 +45,4 @@ sudo usermod -aG dialout $USER
 sudo reboot
 ```
 https://mickey-happygolucky.hatenablog.com/entry/2024/09/27/230200
+https://yiyi-ll.github.io/2025/06/30/yocto%E7%BC%96%E8%AF%91ros2/#1-Yocto%E7%BC%96%E8%AF%91ROS2
