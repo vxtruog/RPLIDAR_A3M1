@@ -11,3 +11,11 @@ git add .
 git commit -m "Add Yocto kirkstone submodules"
 git push origin main
 ```
+- Tại Laptop
+```
+git clone https://github.com/vxtruog/RPLIDAR_A3M1.git
+cd ~/RPLIDAR_A3M1
+git submodule status
+git submodule init
+git submodule update
+```
