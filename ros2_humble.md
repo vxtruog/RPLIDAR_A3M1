@@ -44,3 +44,4 @@ ls -l /dev/ttyUSB0
 sudo usermod -aG dialout $USER
 sudo reboot
 ```
+https://mickey-happygolucky.hatenablog.com/entry/2024/09/27/230200
