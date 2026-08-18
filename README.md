@@ -19,3 +19,14 @@ git submodule status
 git submodule init
 git submodule update
 ```
+
+# 2. XÂY DỰNG MÔI TRƯỜNG ROS2 HUMBLE VỚI YOCTO PROJECT TẠI LAPTOP
+- Xây dựng môi trường ROS2 tại laptop
+```
+sudo apt install gfortran
+cd ~/../poky
+source oe-init-build-env
+cd ../..
+./vuxuantruong.sh
+```
+
