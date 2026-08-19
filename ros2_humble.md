@@ -13,7 +13,7 @@
 su -
 usermod -aG sudo <username>
 exit
-su - <username>
+reboot
 ```
 - Truy cập https://docs.ros.org/ và làm theo hướng dẫn để cài đặt ROS2 phù hợp
 
