@@ -56,3 +56,44 @@
 + Định vị và lập bản đồ đồng thời (SLAM).
 + Định vị và tránh vật cản cho đồ chơi thông minh.
 ```
+
+```
+A3M1
+  ↓
+sllidar_ros2
+  ↓
+/scan
+  ↓
+lidar_processor_node
+  ├── frame_id
+  ├── timestamp
+  ├── angle_min/max
+  ├── angle_increment
+  ├── scan_time
+  ├── time_increment
+  ├── range_min/max
+  ├── số điểm
+  ├── số điểm hợp lệ
+  ├── khoảng cách min/max
+  └── thống kê intensity
+```
+
+```
+Device Info
+├── Model ID
+├── Firmware version
+├── Hardware version
+└── Serial number
+
+Health
+├── Status
+└── Error code
+
+Supported Scan Modes
+├── ID
+├── Name
+├── us_per_sample
+├── Sample rate
+├── Max distance
+└── Answer type
+```
